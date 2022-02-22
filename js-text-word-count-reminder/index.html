@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Text Box</title>
+  </head>
+  <body>
+    <textarea
+      id="textbox"
+      rows="3"
+      cols="40"
+      onkeyup="checkWordCount()"
+    ></textarea>
+
+    <h4>Remaining Word Count - <span id="remaining-wordcount"></span></h4>
+
+    <script type="text/javascript">
+      let limit = 10; // Changable Initial Limit
+      let count = 0;
+      let remainingWordCount = document.getElementById("remaining-wordcount");
+      remainingWordCount.onload = checkWordCount(); // Initial state limit call
+
+      function checkWordCount() {
+        let textbox = document.getElementById("textbox");
+        count = textbox.value.length;
+
+        if (count >= limit) {
+          textbox.value = textbox.value.slice(0, limit);
+          count = limit;
+        }
+
+        remainingWordCount.innerHTML = limit - count;
+      }
+    </script>
+  </body>
+</html>
