@@ -1,5 +1,3 @@
-const s1 = document.getElementsByClassName("s1")[0];
-const s2 = document.getElementsByClassName("s2")[0];
 const s3 = document.getElementsByClassName("s3")[0];
 
 s3.addEventListener("click", (e) => {
