@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+}
+
+.container > div {
+  padding: 1rem;
+}
+
+.text-input {
+  display: block;
+  max-width: 300px;
+  min-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: solid 1px;
+
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.highlight {
+  color: blue;
+}

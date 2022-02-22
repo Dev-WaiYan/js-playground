@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Field Comparison</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section>
+      <h1>
+        Click compare button and will see like that <i>`123 4`</i> and
+        <i>`123 5`</i> have same number <i>`123`</i>.
+      </h1>
+      <p>Also can change input values.</p>
+    </section>
+    <section class="container">
+      <div>
+        <label for="phone">Phone</label>
+        <div
+          contenteditable="true"
+          class="text-input"
+          id="div-phone"
+          onkeydown="preventDefault(event)"
+        >
+          123 4
+        </div>
+      </div>
+
+      <div>
+        <label for="fax">Fax</label>
+        <div
+          contenteditable="true"
+          class="text-input"
+          id="div-fax"
+          onkeydown="preventDefault(event)"
+        >
+          123 5
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div>
+        <button onclick="compare()">Compare</button>
+      </div>
+    </section>
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/logic.js" defer></script>
+  </body>
+</html>
